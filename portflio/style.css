@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+.navbar-brand{
+    font-weight: 600;
+}
+.nav-link{
+    color: #ffff !important;
+    border-bottom: 1px solid transparent;
+}
+.nav-link:hover{
+      border-bottom: 1px solid aquamarine;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+}
+#home{
+    width: 100%;
+    height: 80vh;
+    background:linear-gradient(rgba(0,0,0,.4),rgb(0,0,0,.6)),url(img/img.jpg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+#home p{
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    opacity: 0;
+    animation: text 3s ease-in-out;
+}
+#home p:nth-child(1){
+    animation-delay: 0s;
+}
+#home p:nth-child(2){
+    animation-delay: 3s;
+}
+@keyframes  text{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#home span{
+    color: pink;
+}
+@media  screen and (max-width:576px) {
+    #home p{
+       font-size: 80px;
+    }
+}
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+.circle{
+    width: 400px;
+    height: 400px;
+    background: rgb(247, 170, 183);
+    position: relative;
+    margin-bottom: 3%;
+    margin-top: 10%;
+    box-shadow: 0px 5px 12px rgba(0,0,0,.2);
+    transition: 1s;
+}
+.circle img{
+    position: absolute;
+    height: 270px;
+    width: 280px;
+    border-radius: 45rem;
+    top:-6%;
+    left: 3%;
+    box-shadow: 0px 30px 20px rgba(0,0,0,.2);
+    transition: 1s;
+    /* filter: drop-shadow(0px 15px 15px rgba(0,0,0,0.2)); */
+}
+.circle:hover{
+    width: 700px;
+    height: 400px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.circle:hover img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: 1s;
+}
+.circle:hover .content{
+    position: absolute;
+    top: 13%;
+    right: 0;
+    color: white;
+    width: 50%;
+    opacity: 1;
+    transition: 1s;
+}
+.circle .content{
+    opacity: 0;
+}
+@media  screen and(max-width:576px) {
+    .circle{
+        width: 400px;
+        height: 400px;
+        background: rgb(70, 13, 22);
+        position: relative;
+        margin-bottom: 3%;
+        margin-top: 10%;
+        box-shadow: 0px 5px 12px rgba(0,0,0,.2);
+        transition: 1s;
+    }
+    .circle:hover{
+        width: 400px;
+        height: 600px;
+        border-radius: 10px;
+        transition: 1s;
+    }
+    .circle:hover img{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transition: 1s;
+    }
+    .circle:hover .content{
+        position: absolute;
+        top: 53%;
+        padding: 12px;
+        right: 0;
+        color: white;
+        width: 50%;
+        opacity: 1;
+        transition: 1s;
+    }
+    .circle .content{
+        opacity: 0;
+    }
+}
+/* skills */
+
+#skills{
+    padding-top: 5%;
+    background: rgb(165, 164, 164);
+}
+#skills .container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+label{
+    font-size: 20px;
+}
+.progress{
+    height: 25px !important ;
+    box-shadow: 2px 4px 5px gray, -2px -2px 5px #ffff;
+}
+.progress:hover{
+    box-shadow: 2px 4px 3px #fff, -2px -2px 3px gray;
+}
+
+/* project */
+#projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+}
+.carousel{
+    width: 80%;
+    height: 80vh;
+    box-shadow: 2px 4px 3px #fff, -2px -2px 3px gray;
+}
+.carousel-inner .carousel-item img{
+    width: 100%;
+    height: 80vh;
+}
+@media screen and(min-width:576px) {
+    .carousel{
+        width: 80%;
+        height: 50vh;
+        box-shadow: 2px 4px 3px #fff, -2px -2px 3px gray;
+    }
+    .carousel-inner .carousel-item img{
+        width: 100%;
+        height: 50vh;
+    }
+}
+#contact{
+    padding-top: 5%;
+    background-color: aliceblue;
+}
+#contact iframe{
+    box-shadow: 15px 20px 10px rgba(0,0,0,.4);
+}
+footer{
+    background-color: rgb(83, 79, 79);
+    letter-spacing: .5px;
+    padding: 4px;
+    color: white;
+}
